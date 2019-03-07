@@ -93,7 +93,7 @@ const ItemCtrl = (function() {
       }
 
       // Calories to number
-      const calories = parseInt(calories);
+      calories = parseInt(calories);
 
       // Create new item (calling the contructor)
       newItem = new Item(ID, name, calories);
@@ -106,7 +106,7 @@ const ItemCtrl = (function() {
     getItemById: function(id){
       let found = null;
       // Loop through items
-      data.items.forEach(function(){
+      data.items.forEach(function(item){
         if(item.id === id) {
           found = item;
         }
@@ -119,7 +119,7 @@ const ItemCtrl = (function() {
 
       let found = null;
 
-      data.items.forEach(function(){
+      data.items.forEach(function(item){
         if(item.id === data.currentItem.id) {
           item.name = name;
           item.calories = calories;
@@ -130,7 +130,7 @@ const ItemCtrl = (function() {
     },
     deleteItem: function(id){
       // Get ids
-      ids = data.items.map(function(item){
+      const ids = data.items.map(function(item){
         return item.id;
       });
 
@@ -236,7 +236,7 @@ const UICtrl = (function() {
         const itemID = listItem.getAttribute('id');
 
         if(itemID === `item-${item.id}`) {
-          document.querySelector(`#{itemID}`).innerHTML = `<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
+          document.querySelector(`#${itemID}`).innerHTML = `<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
           <a href="#" class="secondary-content">
             <i class="edit-item fa fa-pencil"></i>
           </a>`;
