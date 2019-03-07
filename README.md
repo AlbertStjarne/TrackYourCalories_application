@@ -6,7 +6,7 @@ The added items persist to local storage.
 
 It is built purely with vanilla JavaScript, so no framework, applying the module pattern.
 
-Materializecss is used for styling.
+materializecss is used for styling.
 [materializecss](https://materializecss.com/getting-started.html)
 
 
@@ -15,12 +15,12 @@ Materializecss is used for styling.
 
 Add items
 
-<img src="additem.gif" width=450>
+<img src="additem.gif" width=650>
 
 
 Edit item
 
-<img src="edititem.gif" width=450>
+<img src="edititem.gif" width=650>
 
 
 ## Author
